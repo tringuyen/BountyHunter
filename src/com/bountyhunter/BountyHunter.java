@@ -1,4 +1,4 @@
-package com.example.android.bountyhunter;
+package com.bountyhunter;
 
 import android.app.Activity;
 import android.os.Bundle;
