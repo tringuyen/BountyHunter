@@ -4,5 +4,5 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:gravity="center">
-    <TextView android:id="@+id/textView1" android:layout_height="wrap_content" android:text="@string/Rooms" android:layout_width="wrap_content"></TextView>
+    <TextView android:id="@+id/textView1" android:layout_height="wrap_content" android:text="@string/DebugLocation" android:layout_width="wrap_content"></TextView>
 </LinearLayout>
