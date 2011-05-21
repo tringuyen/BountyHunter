@@ -2,4 +2,12 @@
 <resources>
     <string name="hello">Hello World, BountyHunter!</string>
     <string name="app_name">Bounty Hunter</string>
+    <string name="titlemenu">Welcome to Bounty Hunter!</string>
+    <string name="Button">Begin the hunt</string>
+    <string name="menutest">Testing New Page String</string>
+    <string name="testmenuButton">Click to go back to home screen</string>
+    <string name="MapLocation">Map Location</string>
+    <string name="DebugLocation">Debug Location</string>
+    <string name="Rooms">Rooms</string>
+    <string name="thisismenu">Main Menu</string>
 </resources>
