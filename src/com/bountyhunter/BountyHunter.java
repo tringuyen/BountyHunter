@@ -1,6 +1,7 @@
 package com.bountyhunter;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -46,11 +47,13 @@ public class BountyHunter extends Activity /*implements OnClickListener */
     }
     public void mapLocation(View view)
     {
-    	setContentView(R.layout.map);
+    	Intent myIntent = new Intent(BountyHunter.this, BountyMap.class);
+    	BountyHunter.this.startActivity(myIntent);
     }
     public void debugLocation(View view)
     {
-    	setContentView(R.layout.debug);
+    	Intent myIntent = new Intent(BountyHunter.this, BountyLocation.class);
+    	BountyHunter.this.startActivity(myIntent);
     }
     public void rooms(View view)
     {

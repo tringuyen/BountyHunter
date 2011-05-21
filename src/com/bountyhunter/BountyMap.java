@@ -20,7 +20,7 @@ public class BountyMap extends MapActivity {
 
 	public void onCreate(Bundle bundle) {
 		super.onCreate(bundle);
-		setContentView(R.layout.main); // bind the layout to the activity
+		setContentView(R.layout.map); // bind the layout to the activity
 
 		// create a map view
 		//RelativeLayout linearLayout = (RelativeLayout) findViewById(R.id.mainlayout);
@@ -28,7 +28,7 @@ public class BountyMap extends MapActivity {
 		mapView.setBuiltInZoomControls(true);
 		mapView.setStreetView(true);
 		mapController = mapView.getController();
-		mapController.setZoom(14); // Zoom 1 is world view
+		mapController.setZoom(18); // Zoom 1 is world view
 		locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 		locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0,
 				0, new GeoUpdateHandler());

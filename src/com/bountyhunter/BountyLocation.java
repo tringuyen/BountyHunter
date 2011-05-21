@@ -21,9 +21,10 @@ public class BountyLocation extends Activity implements LocationListener {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.main);
-		//latituteField = (TextView) findViewById(R.id.TextView02);
-		//longitudeField = (TextView) findViewById(R.id.TextView04);
+		setContentView(R.layout.location);
+		
+		latituteField = (TextView) findViewById(R.id.TextView02);
+		longitudeField = (TextView) findViewById(R.id.TextView04);
 
 		// Get the location manager
 		locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
@@ -31,7 +32,7 @@ public class BountyLocation extends Activity implements LocationListener {
 		// default
 		Criteria criteria = new Criteria();
 		provider = locationManager.getBestProvider(criteria, false);
-		Location location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+		Location location = locationManager.getLastKnownLocation(provider);
 
 		// Initialize the location fields
 		if (location != null) {
