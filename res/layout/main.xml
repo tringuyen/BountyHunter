@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainlayout"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <com.google.android.maps.MapView
+        android:id="@+id/mapview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:enabled="true"
+        android:clickable="true"
+        android:apiKey="0NgV-FCHJ3j1I8UHrxIDUao4hs_zs_F41IfMZIQ"
+        
+    />
+
+</RelativeLayout>
+
+<!--
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<LinearLayout android:id="@+id/linearLayout1"
+		android:layout_height="wrap_content" android:layout_width="match_parent"
+		android:orientation="horizontal" android:layout_marginTop="40dip">
+		<TextView android:text="Latitude: " android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:id="@+id/TextView01" android:layout_marginLeft="10dip" android:layout_marginRight="5dip" android:textSize="20dip"></TextView>
+		<TextView android:text="unknown" android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:id="@+id/TextView02" android:textSize="20dip"></TextView>
+	</LinearLayout>
+	<LinearLayout android:id="@+id/linearLayout2"
+		android:layout_height="wrap_content" android:layout_width="match_parent">
+		<TextView android:text="Longitute: " android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:id="@+id/TextView03"
+			android:layout_marginLeft="10dip" android:layout_marginRight="5dip" android:textSize="20dip"></TextView>
+		<TextView android:text="unknown" android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:id="@+id/TextView04" android:textSize="20dip"></TextView>
+	</LinearLayout>
+
+
+</LinearLayout>
+ -->
+
+<!--  
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+<TextView  
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:text="@string/hello"
+    />
+</LinearLayout>
+-->
