@@ -1,64 +1,59 @@
-package com.bountyhunter;
+package com.example.android.bountyhunter;
 
-import android.content.Context;
-import android.location.Location;
-import android.location.LocationListener;
-import android.location.LocationManager;
+import android.app.Activity;
 import android.os.Bundle;
-//import android.widget.RelativeLayout;
+import android.view.View;
+import android.widget.Toast;
 
-import com.google.android.maps.GeoPoint;
-import com.google.android.maps.MapActivity;
-import com.google.android.maps.MapController;
-import com.google.android.maps.MapView;
-
-public class BountyHunter extends MapActivity {
-
-	private MapController mapController;
-	private MapView mapView;
-	private LocationManager locationManager;
-
-	public void onCreate(Bundle bundle) {
-		super.onCreate(bundle);
-		setContentView(R.layout.main); // bind the layout to the activity
-
-		// create a map view
-		//RelativeLayout linearLayout = (RelativeLayout) findViewById(R.id.mainlayout);
-		mapView = (MapView) findViewById(R.id.mapview);
-		mapView.setBuiltInZoomControls(true);
-		mapView.setStreetView(true);
-		mapController = mapView.getController();
-		mapController.setZoom(14); // Zoom 1 is world view
-		locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-		locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0,
-				0, new GeoUpdateHandler());
-	}
-
-	@Override
-	protected boolean isRouteDisplayed() {
-		return false;
-	}
-
-	public class GeoUpdateHandler implements LocationListener {
-
-		@Override
-		public void onLocationChanged(Location location) {
-			int lat = (int) (location.getLatitude() * 1E6);
-			int lng = (int) (location.getLongitude() * 1E6);
-			GeoPoint point = new GeoPoint(lat, lng);
-			mapController.animateTo(point); //	mapController.setCenter(point);
+public class BountyHunter extends Activity /*implements OnClickListener */
+{
+    //protected Button button1;
+    //protected Button button2;
+	
+	/** Called when the activity is first created. */
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);
+        //ImageView logo = (ImageView) findViewById(R.id.logo);
+        //button1 = (Button) findViewById(R.id.mainButton);
+        //button2 = (Button) findViewById(R.id.menuButton);
+    }
+    /*public void onClick(View v)
+    {
+		if (v == button1)
+    	{
+    		setContentView(R.layout.menu);
+    		Toast.makeText(this, "Clicked main button", Toast.LENGTH_SHORT).show();
+    	}
+		else if (v == button2)
+		{
+			setContentView(R.layout.main);
+			Toast.makeText(this, "Clicked menu button", Toast.LENGTH_SHORT).show();
 		}
-
-		@Override
-		public void onProviderDisabled(String provider) {
-		}
-
-		@Override
-		public void onProviderEnabled(String provider) {
-		}
-
-		@Override
-		public void onStatusChanged(String provider, int status, Bundle extras) {
-		}
-	}
+    }*/
+    
+    //the following are all buttons
+    public void mainClick(View view)
+    {
+    	setContentView(R.layout.menu);
+    	Toast.makeText(this, "Clicked main button", Toast.LENGTH_SHORT).show();
+    }
+    public void menuClick(View view)
+    {
+    	setContentView(R.layout.main);
+    	Toast.makeText(this, "Button in menu was clicked!", Toast.LENGTH_LONG).show();
+    }
+    public void mapLocation(View view)
+    {
+    	setContentView(R.layout.map);
+    }
+    public void debugLocation(View view)
+    {
+    	setContentView(R.layout.debug);
+    }
+    public void rooms(View view)
+    {
+    	setContentView(R.layout.rooms);
+    }
 }
