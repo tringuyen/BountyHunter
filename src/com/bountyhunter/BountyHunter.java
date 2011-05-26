@@ -55,8 +55,9 @@ public class BountyHunter extends Activity /*implements OnClickListener */
     	Intent myIntent = new Intent(BountyHunter.this, BountyLocation.class);
     	BountyHunter.this.startActivity(myIntent);
     }
-    public void rooms(View view)
+    public void Rooms(View view)
     {
-    	setContentView(R.layout.rooms);
+    	Intent myIntent = new Intent(BountyHunter.this, BountyRoom.class);
+    	BountyHunter.this.startActivity(myIntent);
     }
 }

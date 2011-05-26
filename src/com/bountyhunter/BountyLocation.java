@@ -37,8 +37,8 @@ public class BountyLocation extends Activity implements LocationListener {
 		// Initialize the location fields
 		if (location != null) {
 			System.out.println("Provider " + provider + " has been selected.");
-			int lat = (int) (location.getLatitude());
-			int lng = (int) (location.getLongitude());
+			float lat = (float) (location.getLatitude());
+			float lng = (float) (location.getLongitude());
 			latituteField.setText(String.valueOf(lat));
 			longitudeField.setText(String.valueOf(lng));
 		} else {

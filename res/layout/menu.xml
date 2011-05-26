@@ -22,5 +22,5 @@
     	android:text="@string/Rooms" 
     	android:id="@+id/button3" 
     	android:layout_width="wrap_content"
-    	android:onClick="rooms"></Button>
+    	android:onClick="Rooms"></Button>
 </LinearLayout>
