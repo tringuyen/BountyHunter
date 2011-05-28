@@ -11,4 +11,8 @@
     <string name="Rooms">Join a Room</string>
     <string name="Create">Create a Room</string>
     <string name="thisismenu">Main Menu</string>
+    
+    <string name="createTitle">Create a Room</string>
+    <string name="feedbackRoomName">Room Name</string>
+    <string name="feedbackPlayerName">Player Name</string>
 </resources>

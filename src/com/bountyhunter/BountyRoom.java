@@ -48,7 +48,6 @@ public class BountyRoom extends ListActivity {
 			JSONArray roomlist = rooms.getJSONArray("roomList");
 			JSONObject cur_room;
 			room_names = new String[roomlist.length()];
-			//roomtext.setText(String.valueOf(roomlist.length()));
 		
 			for (int i = 0; i < roomlist.length(); i++) {
 				cur_room = roomlist.getJSONObject(i);

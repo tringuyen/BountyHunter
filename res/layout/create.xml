@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    
+    <TextView  
+    android:id="@+id/TextViewTitle"  
+    android:layout_width="wrap_content"  
+    android:layout_height="wrap_content"  
+    android:text="@string/createTitle"  
+    android:textSize="10pt">  
+	</TextView>  
+    
+    <TextView android:text="Name of Room: " android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:id="@+id/TextView01"
+			android:layout_marginLeft="10dip" android:layout_marginRight="5dip" android:textSize="20dip"></TextView>
+	<EditText
+	    android:id="@+id/roomName"
+	    android:layout_height="wrap_content"
+	    android:hint="@string/feedbackRoomName"
+	    android:inputType="textPersonName"
+	    android:layout_width="fill_parent">
+	</EditText>
+
+    
+    <TextView android:text="Desired Player Name: " android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:id="@+id/TextView02"
+			android:layout_marginLeft="10dip" android:layout_marginRight="5dip" android:textSize="20dip"></TextView>    
+   
+   <EditText
+	    android:id="@+id/playerName"
+	    android:layout_height="wrap_content"
+	    android:hint="@string/feedbackPlayerName"
+	    android:inputType="textPersonName"
+	    android:layout_width="fill_parent">
+	</EditText>
+        
+    <Button
+        android:id="@+id/sendCreate"
+        android:layout_gravity="center_vertical|center_horizontal|center"
+        android:layout_width="150dip"
+        android:layout_height="wrap_content"
+        android:onClick="sendCreate"
+        android:layout_marginLeft="10dip"
+        android:text="Create Room" />
+        
+        
+</LinearLayout>
