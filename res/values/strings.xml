@@ -8,6 +8,7 @@
     <string name="testmenuButton">Click to go back to home screen</string>
     <string name="MapLocation">Map Location</string>
     <string name="DebugLocation">Debug Location</string>
-    <string name="Rooms">Rooms</string>
+    <string name="Rooms">Join a Room</string>
+    <string name="Create">Create a Room</string>
     <string name="thisismenu">Main Menu</string>
 </resources>

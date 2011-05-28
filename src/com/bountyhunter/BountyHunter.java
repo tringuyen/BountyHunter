@@ -40,24 +40,33 @@ public class BountyHunter extends Activity /*implements OnClickListener */
     	setContentView(R.layout.menu);
     	Toast.makeText(this, "Clicked main button", Toast.LENGTH_SHORT).show();
     }
+    
     public void menuClick(View view)
     {
     	setContentView(R.layout.main);
     	Toast.makeText(this, "Button in menu was clicked!", Toast.LENGTH_LONG).show();
     }
+    
     public void mapLocation(View view)
     {
     	Intent myIntent = new Intent(BountyHunter.this, BountyMap.class);
     	BountyHunter.this.startActivity(myIntent);
     }
+    
     public void debugLocation(View view)
     {
     	Intent myIntent = new Intent(BountyHunter.this, BountyLocation.class);
     	BountyHunter.this.startActivity(myIntent);
     }
+    
     public void Rooms(View view)
     {
     	Intent myIntent = new Intent(BountyHunter.this, BountyRoom.class);
+    	BountyHunter.this.startActivity(myIntent);
+    }
+    
+    public void Create(View view) {
+    	Intent myIntent = new Intent(BountyHunter.this, BountyCreate.class);
     	BountyHunter.this.startActivity(myIntent);
     }
 }

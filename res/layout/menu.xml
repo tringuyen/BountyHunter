@@ -6,6 +6,18 @@
     android:gravity="center">
     <TextView android:id="@+id/textView1" android:layout_height="wrap_content" android:text="@string/thisismenu" android:layout_width="wrap_content"></TextView>
     <Button 
+		android:layout_height="wrap_content" 
+		android:text="@string/Rooms" 
+		android:id="@+id/button3" 
+		android:layout_width="wrap_content"
+		android:onClick="Rooms"></Button>
+    <Button 
+		android:layout_height="wrap_content" 
+		android:text="@string/Create" 
+		android:id="@+id/button4" 
+		android:layout_width="wrap_content"
+		android:onClick="Create"></Button>
+    <Button 
     	android:layout_height="wrap_content" 
     	android:id="@+id/button1" 
     	android:layout_width="wrap_content" 
@@ -17,10 +29,5 @@
     	android:id="@+id/button2" 
     	android:layout_width="wrap_content"
     	android:onClick="debugLocation"></Button>
-    <Button 
-    	android:layout_height="wrap_content" 
-    	android:text="@string/Rooms" 
-    	android:id="@+id/button3" 
-    	android:layout_width="wrap_content"
-    	android:onClick="Rooms"></Button>
+
 </LinearLayout>
