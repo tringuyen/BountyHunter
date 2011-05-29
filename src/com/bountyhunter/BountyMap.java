@@ -21,8 +21,6 @@ public class BountyMap extends MapActivity {
 	private static final long MINIMUM_DISTANCE_CHANGE_FOR_UPDATES = 1; // in Meters
     private static final long MINIMUM_TIME_BETWEEN_UPDATES = 2000; // in Milliseconds
 	     
-
-
 	private MapController mapController;
 	private MapView mapView;
 	private LocationManager locationManager;
@@ -67,7 +65,7 @@ public class BountyMap extends MapActivity {
 			
 			// Add the overlay item
 			OverlayItem overlayitem = new OverlayItem(point, "Hola, Mundo!", "You are current at" +
-					"Latitude: " + lat + " and Longitude: " + lng);
+					"Latitude: " + String.valueOf(lat) + " and Longitude: " + String.valueOf(lng));
 			itemizedoverlay.addOverlay(overlayitem);
 			mapOverlays.add(itemizedoverlay);
 			

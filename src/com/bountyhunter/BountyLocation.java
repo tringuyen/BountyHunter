@@ -63,8 +63,8 @@ public class BountyLocation extends Activity implements LocationListener {
 
 	@Override
 	public void onLocationChanged(Location location) {
-		int lat = (int) (location.getLatitude());
-		int lng = (int) (location.getLongitude());
+		float lat = (float) (location.getLatitude());
+		float lng = (float) (location.getLongitude());
 		latituteField.setText(String.valueOf(lat));
 		longitudeField.setText(String.valueOf(lng));
 	}

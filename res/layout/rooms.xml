@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:id="@+id/LinearLayout01"
-	android:layout_width="fill_parent"
-	android:layout_height="fill_parent"
-	xmlns:android="http://schemas.android.com/apk/res/android">
-	<!-- <LinearLayout android:id="@+id/linearLayout2"
-		android:layout_height="wrap_content" android:layout_width="match_parent">
-		<TextView android:text="Number of Rooms: " android:layout_height="wrap_content"
-			android:layout_width="wrap_content" android:id="@+id/TextView03"
-			android:layout_marginLeft="10dip" android:layout_marginRight="5dip" android:textSize="20dip"></TextView>
-		<TextView android:text="unknown" android:layout_height="wrap_content"
-			android:layout_width="wrap_content" android:id="@+id/TextView04" android:textSize="20dip"></TextView>
-	</LinearLayout> -->
-	
-	<ListView android:id="@+id/ListView01"
-	android:layout_width="fill_parent"
-	android:layout_height="wrap_content" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    
+    <TextView  
+    android:id="@+id/listViewTitle"  
+    android:layout_width="wrap_content"  
+    android:layout_height="wrap_content"  
+    android:text="@string/listTitle"  
+    android:textSize="10pt">  
+	</TextView>  
 
 </LinearLayout>

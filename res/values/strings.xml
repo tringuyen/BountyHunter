@@ -15,4 +15,6 @@
     <string name="createTitle">Create a Room</string>
     <string name="feedbackRoomName">Room Name</string>
     <string name="feedbackPlayerName">Player Name</string>
+    
+    <string name="listTitle">List of current rooms: </string>
 </resources>

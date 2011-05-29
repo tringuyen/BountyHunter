@@ -17,8 +17,6 @@ public final class R {
         public static final int logo=0x7f020003;
     }
     public static final class id {
-        public static final int LinearLayout01=0x7f050014;
-        public static final int ListView01=0x7f050015;
         public static final int TextView01=0x7f050001;
         public static final int TextView02=0x7f050003;
         public static final int TextView03=0x7f050009;
@@ -30,6 +28,7 @@ public final class R {
         public static final int button4=0x7f050011;
         public static final int linearLayout1=0x7f050007;
         public static final int linearLayout2=0x7f050008;
+        public static final int listViewTitle=0x7f050014;
         public static final int logo=0x7f05000b;
         public static final int mainButton=0x7f05000d;
         public static final int mainlayout=0x7f05000e;
@@ -61,6 +60,7 @@ public final class R {
         public static final int feedbackPlayerName=0x7f04000d;
         public static final int feedbackRoomName=0x7f04000c;
         public static final int hello=0x7f040000;
+        public static final int listTitle=0x7f04000e;
         public static final int menutest=0x7f040004;
         public static final int testmenuButton=0x7f040005;
         public static final int thisismenu=0x7f04000a;
