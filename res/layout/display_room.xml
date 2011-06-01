@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    
+    <TextView  
+    android:id="@+id/roomTextViewTitle"  
+    android:layout_width="wrap_content"  
+    android:layout_height="wrap_content"  
+    android:text="@string/roomTitle"  
+    android:textSize="10pt">  
+	</TextView>
+    
+    <LinearLayout android:id="@+id/roomlinearLayout1"
+		android:layout_height="wrap_content" android:layout_width="match_parent">
+	<TextView android:text="Room Name: " android:layout_height="wrap_content"
+		android:layout_width="wrap_content" android:id="@+id/RoomNameTag"
+		android:layout_marginLeft="10dip" android:layout_marginRight="5dip" android:textSize="20dip"></TextView>
+	<TextView android:text="unknown" android:layout_height="wrap_content"
+		android:layout_width="wrap_content" android:id="@+id/RoomNameData" android:textSize="20dip"></TextView>
+	</LinearLayout>
+	
+	<LinearLayout android:id="@+id/roomlinearLayout2"
+		android:layout_height="wrap_content" android:layout_width="match_parent">
+	<TextView android:text="Room Owner: " android:layout_height="wrap_content"
+		android:layout_width="wrap_content" android:id="@+id/OwnerTag"
+		android:layout_marginLeft="10dip" android:layout_marginRight="5dip" android:textSize="20dip"></TextView>
+	<TextView android:text="unknown" android:layout_height="wrap_content"
+		android:layout_width="wrap_content" android:id="@+id/OwnerData" android:textSize="20dip"></TextView>
+	</LinearLayout>
+	
+	<LinearLayout android:id="@+id/roomlinearLayout3"
+		android:layout_height="wrap_content" android:layout_width="match_parent">	
+	<TextView android:text="Status: " android:layout_height="wrap_content"
+		android:layout_width="wrap_content" android:id="@+id/StatusTag"
+		android:layout_marginLeft="10dip" android:layout_marginRight="5dip" android:textSize="20dip"></TextView>
+	<TextView android:text="unknown" android:layout_height="wrap_content"
+		android:layout_width="wrap_content" android:id="@+id/StatusData" android:textSize="20dip"></TextView>
+	</LinearLayout>
+	
+	<LinearLayout android:id="@+id/roomlinearLayout4"
+		android:layout_height="wrap_content" android:layout_width="match_parent">
+	<TextView android:text="Number of Players: " android:layout_height="wrap_content"
+		android:layout_width="wrap_content" android:id="@+id/NumPlayersTag"
+		android:layout_marginLeft="10dip" android:layout_marginRight="5dip" android:textSize="20dip"></TextView>
+	<TextView android:text="unknown" android:layout_height="wrap_content"
+		android:layout_width="wrap_content" android:id="@+id/NumPlayersData" android:textSize="20dip"></TextView>
+	</LinearLayout>
+	
+	<TextView android:text="Current Players: " android:layout_height="wrap_content"
+		android:layout_width="wrap_content" android:id="@+id/CurrentPlayersTag"
+		android:layout_marginLeft="10dip" android:layout_marginRight="5dip" android:textSize="20dip"></TextView>
+	<ListView android:id="@android:id/list" android:layout_height="wrap_content"
+		android:layout_width="match_parent" />
+	
+	 
+			
+</LinearLayout>

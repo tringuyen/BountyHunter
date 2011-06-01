@@ -17,4 +17,6 @@
     <string name="feedbackPlayerName">Player Name</string>
     
     <string name="listTitle">List of current rooms: </string>
+    
+    <string name="roomTitle">Room Information </string>
 </resources>
