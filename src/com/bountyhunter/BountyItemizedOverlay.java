@@ -19,7 +19,7 @@ public class BountyItemizedOverlay extends ItemizedOverlay {
 	}
 	
 	public BountyItemizedOverlay(Drawable defaultMarker, Context context) {
-		  super(defaultMarker);
+		  super(boundCenterBottom(defaultMarker));
 		  mContext = context;
 	}
 

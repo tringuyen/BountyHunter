@@ -19,6 +19,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.app.ListActivity;
+import android.content.Intent;
 import android.location.Location;
 import android.os.Bundle;
 import android.view.View;
@@ -38,6 +39,9 @@ public class BountyCreate extends ListActivity {
 	private JSONObject cur_room;
 	private JSONArray playerList;
 	private JSONArray roomlist;
+	
+	private String m_playerName;
+	private String m_roomName;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -66,10 +70,10 @@ public class BountyCreate extends ListActivity {
 	
 	public void sendCreate(View button) {
 		final EditText roomNameField = (EditText) findViewById(R.id.roomName);  
-		String roomName = roomNameField.getText().toString();  
+		m_roomName = roomNameField.getText().toString();  
 		
 		final EditText playerNameField = (EditText) findViewById(R.id.playerName);  
-		String playerName = playerNameField.getText().toString(); 
+		m_playerName = playerNameField.getText().toString(); 
 		
 		Location cur_location = BountyGetLocation.getLocation(this);
 		float lat = (float) (cur_location.getLatitude());
@@ -84,8 +88,8 @@ public class BountyCreate extends ListActivity {
 		try {
 			// Add your data
 	        List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(4);
-	        nameValuePairs.add(new BasicNameValuePair("playerName", playerName));
-	        nameValuePairs.add(new BasicNameValuePair("RoomName", roomName));
+	        nameValuePairs.add(new BasicNameValuePair("playerName", m_playerName));
+	        nameValuePairs.add(new BasicNameValuePair("RoomName", m_roomName));
 	        nameValuePairs.add(new BasicNameValuePair("latitude", Float.toString(lat)));
 	        nameValuePairs.add(new BasicNameValuePair("longitude", Float.toString(lng)));
 	        httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
@@ -118,14 +122,14 @@ public class BountyCreate extends ListActivity {
 				 
 				 // Display the room information
 				 updateRoomList();
-				 displayRoom(roomName, true);
+				 displayRoom(m_roomName, true);
 			 } 
 			 else {
 				 Toast.makeText(this, json_response.getString("joining"), Toast.LENGTH_SHORT).show();
 				 
 				 // Display the room information
 				 updateRoomList();
-				 displayRoom(roomName, false);
+				 displayRoom(m_roomName, false);
 			 }
 			 
 
@@ -213,9 +217,9 @@ public class BountyCreate extends ListActivity {
 		try {
 			// Add your data
 	        List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(4);
-	        nameValuePairs.add(new BasicNameValuePair("playerName", playerName));
-	        nameValuePairs.add(new BasicNameValuePair("RoomName", roomName));
-	        nameValuePairs.add(new BasicNameValuePair("ready", "10"));
+	        nameValuePairs.add(new BasicNameValuePair("playerName", m_playerName));
+	        nameValuePairs.add(new BasicNameValuePair("RoomName", m_roomName));
+	        nameValuePairs.add(new BasicNameValuePair("ready", "1"));
 	        httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
 	        
 			HttpResponse response = httpclient.execute(httppost);
@@ -237,30 +241,23 @@ public class BountyCreate extends ListActivity {
 		  }
 		 
 		 // Parse JSON response
-		 try {
+		/* try {
 			 JSONObject json_response = new JSONObject(responseString);
 			 
-			 // Display the correct response
-			 if (!json_response.isNull("creation")) {
-				 Toast.makeText(this, json_response.getString("creation"), Toast.LENGTH_SHORT).show();
-				 
-				 // Display the room information
-				 updateRoomList();
-				 displayRoom(roomName, true);
-			 } 
-			 else {
-				 Toast.makeText(this, json_response.getString("joining"), Toast.LENGTH_SHORT).show();
-				 
-				 // Display the room information
-				 updateRoomList();
-				 displayRoom(roomName, false);
-			 }
-			 
-
 			 
 		 } catch(JSONException e) {
 			e.printStackTrace();
-		 }
+		 }*/
+		  
+		// Jump to the game state!
+		 Intent i = new Intent(BountyCreate.this, BountyGameState.class);
+		 Bundle b = new Bundle();
+		 
+		 b.putString("playerName", m_playerName);
+		 b.putString("roomName", m_roomName);
+		 i.putExtras(b);
+		 
+		 BountyCreate.this.startActivity(i);
 			
 	}
 	

@@ -59,7 +59,7 @@
         android:layout_gravity="center_vertical|center_horizontal|center"
         android:layout_width="150dip"
         android:layout_height="wrap_content"
-        android:onClick="sendCreate"
+        android:onClick="startGame"
         android:layout_marginLeft="10dip"
         android:text="Start Game" />
 			
