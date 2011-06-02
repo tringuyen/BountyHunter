@@ -30,6 +30,7 @@ import android.widget.Toast;
 public class BountyCreate extends ListActivity { 
 	
 	private static final String BASE_URL = "http://good-hunting.appspot.com/gamemode";
+	private static final String START_URL = "http://good-hunting.appspot.com/battle";
 	
 	private String [] room_names;
 	private String [] player_list;
@@ -202,5 +203,66 @@ public class BountyCreate extends ListActivity {
 			e.printStackTrace();
 		}
 	}
+	
+	public void startGame(View button) {
+		// Start the game by sending the request to the server
+		String responseString = "";
+		HttpClient httpclient = new DefaultHttpClient();
+		HttpPost httppost = new HttpPost(START_URL);
+		
+		try {
+			// Add your data
+	        List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(4);
+	        nameValuePairs.add(new BasicNameValuePair("playerName", playerName));
+	        nameValuePairs.add(new BasicNameValuePair("RoomName", roomName));
+	        nameValuePairs.add(new BasicNameValuePair("ready", "10"));
+	        httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
+	        
+			HttpResponse response = httpclient.execute(httppost);
+			StatusLine statusLine = response.getStatusLine();
+			if (statusLine.getStatusCode() == HttpStatus.SC_OK){
+			    ByteArrayOutputStream out = new ByteArrayOutputStream();
+			    response.getEntity().writeTo(out);
+			    out.close();
+			    responseString = out.toString();
+			      
+			} else {
+			    //Closes the connection.
+			    response.getEntity().getContent().close();
+			    throw new IOException(statusLine.getReasonPhrase());
+			}
+		  } catch (Exception e) {
+			  // Do something
+			  e.printStackTrace();
+		  }
+		 
+		 // Parse JSON response
+		 try {
+			 JSONObject json_response = new JSONObject(responseString);
+			 
+			 // Display the correct response
+			 if (!json_response.isNull("creation")) {
+				 Toast.makeText(this, json_response.getString("creation"), Toast.LENGTH_SHORT).show();
+				 
+				 // Display the room information
+				 updateRoomList();
+				 displayRoom(roomName, true);
+			 } 
+			 else {
+				 Toast.makeText(this, json_response.getString("joining"), Toast.LENGTH_SHORT).show();
+				 
+				 // Display the room information
+				 updateRoomList();
+				 displayRoom(roomName, false);
+			 }
+			 
+
+			 
+		 } catch(JSONException e) {
+			e.printStackTrace();
+		 }
+			
+	}
+	
 	
 }

@@ -55,7 +55,7 @@
 		android:layout_width="match_parent" />
 	
 	 <Button
-        android:id="@+id/sendCreate"
+        android:id="@+id/startGame"
         android:layout_gravity="center_vertical|center_horizontal|center"
         android:layout_width="150dip"
         android:layout_height="wrap_content"
