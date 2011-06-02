@@ -9,14 +9,14 @@ public class BountyRoomInfo extends Activity {
 	private String m_owner;
 	private String m_status;
 	private int m_numOfPlayers;
-	private String [] m_currentPlayers;
+	//private String [] m_currentPlayers;
 	
 	public BountyRoomInfo(Room room) {
 		m_roomName = room.getRoomName();
 		m_owner = room.getOwnerName();
 		m_status = room.getStatus();
 		m_numOfPlayers = room.getNumOfPlayers();
-		m_currentPlayers = room.getPlayerList();
+		//m_currentPlayers = room.getPlayerList();
 		
 
 		

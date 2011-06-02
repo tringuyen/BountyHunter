@@ -16,7 +16,9 @@
     <string name="feedbackRoomName">Room Name</string>
     <string name="feedbackPlayerName">Player Name</string>
     
-    <string name="listTitle">List of current rooms: </string>
+    <string name="listTitle">List of Current Rooms: </string>
     
     <string name="roomTitle">Room Information </string>
+    
+    <string name="MenuTitle">Bounty Hunter</string>
 </resources>
